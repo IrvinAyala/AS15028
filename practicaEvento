@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>Practica Eventos</title>
+  </head>
+  <body>
+    <h3 id="texto1">Mover mouse</h3>
+    <label id="labelMover"></label>
+    <br><br>
+    <h3 id="texto2">Click mouse</h3>
+    <label id="labelClick"></label>
+
+    <script>
+      var contador1=0;
+      var contador2=0;
+
+      document.getElementById("texto1").onmousemove= function(){
+      contador1 = contador1+1;
+      document.getElementById("labelMover").innerHTML= contador1;
+      };
+
+      document.getElementById("texto2").onclick=function(){
+      contador2 = contador2+1;
+      document.getElementById("labelClick").innerHTML= contador2;
+      };
+    </script>
+
+  </body>
+</html>
