@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Practica CSS</title>
+    <link rel="style" type="text/css" href="archivoCSS"/>
+  </head>
+  <body>
+    <div class="todoBody">
+
+      <div class="dados">
+        <img src=1.jpeg id="dado1" alt="Imagen1"/>
+        <img src=2.jpeg id="dado2" alt="Imagen2"/>
+
+      </div>
+
+      <form class="formulario">
+        <br/>
+        <input type="button" value="Girar" id="boton">
+      </form>
+
+      <br/>
+      <label id="label"></label>
+
+      <div class="script">
+        <script>
+          document.getElementById("boton").onclick= function(){
+            var numero1= Math.floor(Math.random() * 5 + 1);
+            var numero2= Math.floor(Math.random() * 5 + 1);
+            var suma = numero1 + numero2;
+
+            var ruta1 = numero1+".jpeg";
+            var ruta2 = numero2+".jpeg";
+
+            document.getElementById("dado1").setAttribute("src", ruta1);
+            document.getElementById("dado2").setAttribute("src", ruta2);
+            document.getElementById("label").innerHTML= "La suma es "+ suma;
+           };
+
+        </script>
+
+      </div>
+    </div>
+  </body>
+</html>
